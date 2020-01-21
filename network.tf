@@ -70,7 +70,7 @@ ingress_security_rules {
   }
 
   ingress_security_rules {
-    source   = "10.0.0.0/16"
+    source   = "${var.oci_cidr_vcn}"
     protocol = "6"
 
     tcp_options {
@@ -80,7 +80,7 @@ ingress_security_rules {
   }
 
   ingress_security_rules {
-    source   = "10.0.0.0/16"
+    source   = "${var.oci_cidr_vcn}"
     protocol = "17"
 
     udp_options {
