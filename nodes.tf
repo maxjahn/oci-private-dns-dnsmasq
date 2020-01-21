@@ -97,7 +97,7 @@ resource "oci_core_instance" "pdns_public_instance_01" {
 
 
 resource "oci_core_instance" "pdns_private_instance_01" {
-  availability_domain = "${lookup(data.oci_identity_availability_domains.pdns_ads.availability_domains[0],"name")}"
+  availability_domain = "${lookup(data.oci_identity_availability_domains.pdns_ads.availability_domains[1],"name")}"
   compartment_id      = "${var.oci_compartment_ocid}"
   shape               = "VM.Standard2.1"
 
