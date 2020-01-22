@@ -1,4 +1,7 @@
 #cloud-config
+package_upgrade: true
+packages:
+  - dnsmasq
 write_files:
   # create dnsmasq config
   - path: /etc/dnsmasq.conf
@@ -9,8 +12,6 @@ write_files:
 runcmd:
   # Run firewall commands to open DNS (udp/53)
   - firewall-offline-cmd --zone=public --add-port=53/udp
-  # install dnsmasq package
-  - yum install dnsmasq -y
   # enable dnsmasq process
   - systemctl enable dnsmasq
   # restart dnsmasq process
