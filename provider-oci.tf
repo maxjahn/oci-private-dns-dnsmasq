@@ -1,1 +1,1 @@
-provider-oci.cloudshell
+provider-oci.default
