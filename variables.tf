@@ -14,25 +14,30 @@ variable "oci_compartment_ocid" {
 }
 
 variable "oci_region" {
+  default = "eu-frankfurt-1"
 }
 
 variable "oci_cidr_vcn" {
+  default = "10.0.0.0/16"
 }
 
 variable "oci_cidr_forward_subnet" {
+  default = "10.0.99.0/24"
 }
 
 variable "oci_cidr_private_subnet" {
+  default = "10.0.1.0/24"
 }
 
 variable "oci_cidr_public_subnet" {
+  default = "10.0.2.0/24"
 }
 
 variable "ssh_public_key" {
 }
 
 variable "private_dns_domain" {
-  default = "oci.private"
+  default = "oci.local"
 }
 
 variable "oci_base_image" {
